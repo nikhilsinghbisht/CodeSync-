@@ -80,7 +80,7 @@ io.on("connection", (socket) => {
 
   // JUDGE0 API CONFIG
   const JUDGE0_API = "https://judge0-ce.p.rapidapi.com/submissions";
-  const RAPID_API_KEY = "92f575d894msh278e580e8a07e64p13037fjsn13d73d2e9b55";
+  const RAPID_API_KEY = "0a4f7c63a8msh8b2489df609b120p1c238cjsn4c5d14781e98";//"92f575d894msh278e580e8a07e64p13037fjsn13d73d2e9b55";
 
   // COMPILATION HANDLER
   socket.on("compileCode", async ({ code, roomId, language, input }) => {
@@ -186,10 +186,12 @@ const port = process.env.PORT || 5000;
 
 
 const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "backend/public")));
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "public/index.html"));
+  res.sendFile(path.join(__dirname, "backend/public/index.html"));
 });
+
+
 //app.use(express.static(path.join(__dirname, "../frontend/dist")));
 // app.get("*", (req, res) => {
 //   res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));

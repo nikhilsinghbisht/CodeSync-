@@ -7,7 +7,7 @@ import axios from "axios";
 const app = express();
 const server = http.createServer(app);
 
-const url = `http://localhost:5000`;
+const url = `https://codesync-8.onrender.com/`;
 const interval = 30000;
 
 function reloadWebsite() {
